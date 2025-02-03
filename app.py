@@ -81,7 +81,7 @@ if selected_model:
     uploaded_file = st.file_uploader("Upload an Image", type=["jpg", "png", "jpeg"])
 
     if uploaded_file is not None:
-        st.image(uploaded_file, caption="Uploaded Image", use_column_width=True)
+        st.image(uploaded_file, caption="Uploaded Image", use_container_width=True)
         
         img_array, original_img = preprocess_image(uploaded_file)
 
@@ -117,9 +117,9 @@ if selected_model:
 
             col1, col2 = st.columns(2)
             with col1:
-                st.image(mri_cam, caption=f"{selected_model} MRI Detection Grad-CAM", use_column_width=True)
+                st.image(mri_cam, caption=f"{selected_model} MRI Detection Grad-CAM", use_container_width=True)
             with col2:
-                st.image(tumor_cam, caption=f"{selected_model} Tumor Detection Grad-CAM", use_column_width=True)
+                st.image(tumor_cam, caption=f"{selected_model} Tumor Detection Grad-CAM", use_container_width=True)
 
         else:
             st.warning(f"⚠️ The uploaded image is classified as NOT an MRI using {selected_model}.")
