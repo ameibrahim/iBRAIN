@@ -1,0 +1,6 @@
+/datasetBackup
+/datasetBinaryMRI
+/datasetBinaryTumor
+/outputs
+
+*.zip
